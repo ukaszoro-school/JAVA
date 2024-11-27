@@ -1,8 +1,8 @@
-public record Color(int alfa, int red, int green, int blue) {
+public record Color(int alpha, int red, int green, int blue) {
 
-    public Color(int alfa, int red, int green, int blue) {
-        if (alfa < 0) alfa = 0;
-        else if (alfa > 255) alfa = 255;
+    public Color(int alpha, int red, int green, int blue) {
+        if (alpha < 0) alpha = 0;
+        else if (alpha > 255) alpha = 255;
 
         if (red < 0) red = 0;
         else if (red > 255) red = 255;
@@ -13,7 +13,7 @@ public record Color(int alfa, int red, int green, int blue) {
         if (blue < 0) blue = 0;
         else if (blue > 255) blue = 255;
 
-        this.alfa = alfa;
+        this.alpha = alpha;
         this.red = red;
         this.green = green;
         this.blue = blue;
@@ -25,6 +25,6 @@ public record Color(int alfa, int red, int green, int blue) {
 
     @Override
     public String toString() {
-        return String.format("0x%02X", alfa) + String.format("%02X", red) + String.format("%02X", green) + String.format("%02X", blue);
+        return String.format("0x%02X", alpha) + String.format("%02X", red) + String.format("%02X", green) + String.format("%02X", blue);
     }
 }
