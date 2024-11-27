@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        Rectangle new_rect = new Rectangle(2,3);
-        Triangle new_triangle = new Triangle(2.5);
+        Color new_color = new Color(143,255,100,155);
+        System.out.println(new_color.toString());
 
-        ShapeDescriber.describe(new_rect);
-        ShapeDescriber.describe(new_triangle);
+        Color new_color2 = new Color(252,-5,2951);
+        System.out.println(new_color2.toString());
     }
 }
