@@ -5,6 +5,8 @@ public class Triangle extends Shape {
 
     Triangle(double a, Color new_color) {
         super(new_color);
+        if (a <= 0)
+            a = 1;
         side_length = a;
         height = (a * Math.sqrt(3)) / 2;
     }
@@ -16,6 +18,7 @@ public class Triangle extends Shape {
     double getArea() {
         return side_length * height / 2;
     }
+
 
     @Override
     double getPerimeter() {

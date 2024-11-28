@@ -14,11 +14,17 @@ public class Rectangle extends Shape {
 
     @Override
     double getArea() {
-        return side_a * side_b;
+        double result = side_b * side_a;
+        if (result < 0)
+            result = 0;
+        return result;
     }
 
     @Override
     double getPerimeter() {
-        return 2 * (side_a + side_b);
+        double result = 2 * (side_a + side_b);
+        if (side_a <= 0 || side_b <= 0)
+            result = 0;
+        return result;
     }
 }

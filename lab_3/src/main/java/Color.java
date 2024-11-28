@@ -1,6 +1,6 @@
 public record Color(int alpha, int red, int green, int blue) {
 
-    public Color(int alpha, int red, int green, int blue) {
+    public Color {
         if (alpha < 0) alpha = 0;
         else if (alpha > 255) alpha = 255;
 
@@ -13,10 +13,6 @@ public record Color(int alpha, int red, int green, int blue) {
         if (blue < 0) blue = 0;
         else if (blue > 255) blue = 255;
 
-        this.alpha = alpha;
-        this.red = red;
-        this.green = green;
-        this.blue = blue;
     }
 
     public Color(int red, int green, int blue) {

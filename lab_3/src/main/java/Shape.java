@@ -1,11 +1,6 @@
 public abstract class Shape {
     Color Shape_color;
 
-
-    public static void print_name() {
-        System.out.printf(Shape.class.getSimpleName());
-    }
-
     public Shape(Color new_color) {
         Shape_color = new_color;
     }
