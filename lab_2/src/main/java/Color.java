@@ -22,9 +22,4 @@ public record Color(int alfa, int red, int green, int blue) {
     public Color(int red, int green, int blue) {
         this(0,red,green,blue);
     }
-
-    @Override
-    public String toString() {
-        return String.format("0x%02X", alfa) + String.format("%02X", red) + String.format("%02X", green) + String.format("%02X", blue);
-    }
 }
