@@ -1,4 +1,5 @@
 import jakarta.persistence.*;
+import java.util.Scanner;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -20,6 +21,8 @@ public abstract class Shape {
 
     abstract double getArea();
     abstract double getPerimeter();
+    public abstract Shape updateShape(Scanner scanner);
+    public abstract void printFullEntity();
 
     public Long getId() {
         return id;
@@ -35,6 +38,6 @@ public abstract class Shape {
 
     @Override
     public String toString() {
-        return getClass().getSimpleName();
+        return "Type: " + getClass().getSimpleName() + "  ID: " + id;
     }
 }

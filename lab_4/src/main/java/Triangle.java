@@ -1,4 +1,5 @@
 import jakarta.persistence.*;
+import java.util.Scanner;
 
 @Entity
 @DiscriminatorValue("TRIANGLE")
@@ -29,5 +30,33 @@ public class Triangle extends Shape {
     @Override
     double getPerimeter() {
         return side_length * 3;
+    }
+
+    @Override
+    public Shape updateShape(Scanner scanner) {
+        System.out.println("Updating Triangle...");
+        System.out.println("Current Base Length: " + side_length);
+        System.out.println("Current Height: " + height);
+        System.out.println("Current Color: " + getColorDescription());
+
+        System.out.println("Enter new value for Base Length: ");
+        side_length = scanner.nextDouble();
+        height = (side_length * Math.sqrt(3)) / 2; // Recalculate height
+
+        System.out.println("Enter new color components (Alpha, Red, Green, Blue): ");
+        int alpha = scanner.nextInt();
+        int red = scanner.nextInt();
+        int green = scanner.nextInt();
+        int blue = scanner.nextInt();
+
+        Shape_color = new Color(alpha, red, green, blue);
+        return this;
+    }
+
+    @Override
+    public void printFullEntity() {
+        System.out.println(this.toString() + "\n\t" +
+                 this.getColorDescription() + "\n\t" +
+                 "Base length: " + this.side_length + "    Height: "+ this.height + "\n\t");
     }
 }
