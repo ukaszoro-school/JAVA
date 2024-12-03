@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b3594a2-ac19-417d-8079-12c190c8df44" name="Changes" comment="Lab_4&#10;&#10;update log:&#10;- copied over files from lab_3 for work&#10;- configured Shape Rectangle and Triangle classes to Entities for database mapping&#10;- added proper hibernate.cfg.xml configuration for local database&#10;- code now creates one table shapes for both triangles and rectangles while Color is embedded into it&#10;- main holds a quick check for creating and saving a rectangle to database properly" />
+    <list default="true" id="1b3594a2-ac19-417d-8079-12c190c8df44" name="Changes" comment="Some minor github problem fixing">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,10 +23,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RESET_MODE" value="SOFT" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -48,25 +51,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ColorTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.run all.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.lab_4 [clean,compile,site:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.lab_4 [clean,compile,test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.lab_4 [clean,compile].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lenovo/Documents/studia/JAVA/JAVA&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "JUnit.ColorTest.executor": "Run",
+    "JUnit.run all.executor": "Run",
+    "Maven.lab_4 [clean,compile,site:run].executor": "Run",
+    "Maven.lab_4 [clean,compile,test].executor": "Run",
+    "Maven.lab_4 [clean,compile].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/lenovo/Documents/studia/JAVA",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\lenovo\Documents\studia\JAVA\lab_4\src\main\resources" />
@@ -145,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733240585080</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Some minor github problem fixing">
+      <option name="closed" value="true" />
+      <created>1733243981111</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733243981111</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,6 +217,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lab_4&#10;&#10;update log:&#10;- copied over files from lab_3 for work&#10;- configured Shape Rectangle and Triangle classes to Entities for database mapping&#10;- added proper hibernate.cfg.xml configuration for local database&#10;- code now creates one table shapes for both triangles and rectangles while Color is embedded into it&#10;- main holds a quick check for creating and saving a rectangle to database properly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab_4&#10;&#10;update log:&#10;- copied over files from lab_3 for work&#10;- configured Shape Rectangle and Triangle classes to Entities for database mapping&#10;- added proper hibernate.cfg.xml configuration for local database&#10;- code now creates one table shapes for both triangles and rectangles while Color is embedded into it&#10;- main holds a quick check for creating and saving a rectangle to database properly" />
+    <MESSAGE value="Some minor github problem fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some minor github problem fixing" />
   </component>
 </project>
