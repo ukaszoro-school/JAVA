@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c4b1681-25a1-46e7-8073-fd80d5eb13af" name="Changes" comment="Lab_4&#10;&#10;update log:&#10;- fixed a big error caused by previous merge of lab4 into master with wrong directory">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ShapeFactory.java" afterDir="false" />
+    <list default="true" id="9c4b1681-25a1-46e7-8073-fd80d5eb13af" name="Changes" comment="Lab_4&#10;&#10;update log:&#10;- implemented proper tests for all changes from previous commit&#10;- removed a few redundant tests that did not contribute to the coverage / overlapped with others&#10;- ShapeFactory.createShapeFromInput now takes Scanner class as an argument, mostly for testing purpose&#10;- ShapeFactory now has its own tests&#10;- slight change to main interface formatting&#10;- added 'print all shapes from table' functionality&#10;- Removed a few warning from multiple classes (mostly unnecessary code)">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ShapeFactoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Color.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShapeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShapeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShapeDescriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShapeDescriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ShapeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShapeFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ColorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RectangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RectangleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShapeDescriberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShapeDescriberTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShapeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TriangleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +48,9 @@
     &quot;accountId&quot;: &quot;a71712ff-7590-4936-beba-2507e72136fe&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -51,12 +63,16 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Application.run main.executor": "Run",
+    "JUnit.RectangleTest.executor": "Coverage",
+    "JUnit.ShapeFactoryTest.executor": "Coverage",
+    "JUnit.run tests.executor": "Coverage",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/lenovo/Documents/studia/JAVA/lab_4/src/test/java"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.run main">
     <configuration name="run main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="lab_4" />
@@ -64,6 +80,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="run tests" type="JUnit" factoryName="JUnit">
+      <module name="lab_4" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.run main" />
+      <item itemvalue="JUnit.run tests" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -82,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733246973990</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Lab_4&#10;&#10;update log:&#10;- Main class now has a nice console interface for interacting with the database &#10;(exit/add/update/remove/print by id, printing all shapes - work in progress)&#10;- ShapeDao now works properly as a middleman between user code and database&#10;- Triangle and Rectangle now have method updateShape that intakes a scanner and returns itself after changes are made&#10;- Triangle and Rectangle now have method printFullEntity used to print all their information, to String() is now used identifying shapes by type and id&#10;- new class ShapeFactory used to make new shapes with user input">
+      <option name="closed" value="true" />
+      <created>1733251149561</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733251149561</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +137,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lab_4&#10;&#10;update log:&#10;- fixed a big error caused by previous merge of lab4 into master with wrong directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab_4&#10;&#10;update log:&#10;- fixed a big error caused by previous merge of lab4 into master with wrong directory" />
+    <MESSAGE value="Lab_4&#10;&#10;update log:&#10;- Main class now has a nice console interface for interacting with the database &#10;(exit/add/update/remove/print by id, printing all shapes - work in progress)&#10;- ShapeDao now works properly as a middleman between user code and database&#10;- Triangle and Rectangle now have method updateShape that intakes a scanner and returns itself after changes are made&#10;- Triangle and Rectangle now have method printFullEntity used to print all their information, to String() is now used identifying shapes by type and id&#10;- new class ShapeFactory used to make new shapes with user input" />
+    <MESSAGE value="Lab_4&#10;&#10;update log:&#10;- implemented proper tests for all changes from previous commit&#10;- removed a few redundant tests that did not contribute to the coverage / overlapped with others&#10;- ShapeFactory.createShapeFromInput now takes Scanner class as an argument, mostly for testing purpose&#10;- ShapeFactory now has its own tests&#10;- slight change to main interface formatting&#10;- added 'print all shapes from table' functionality&#10;- Removed a few warning from multiple classes (mostly unnecessary code)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab_4&#10;&#10;update log:&#10;- implemented proper tests for all changes from previous commit&#10;- removed a few redundant tests that did not contribute to the coverage / overlapped with others&#10;- ShapeFactory.createShapeFromInput now takes Scanner class as an argument, mostly for testing purpose&#10;- ShapeFactory now has its own tests&#10;- slight change to main interface formatting&#10;- added 'print all shapes from table' functionality&#10;- Removed a few warning from multiple classes (mostly unnecessary code)" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lab_4$run_tests.ic" NAME="run tests Coverage Results" MODIFIED="1733325002360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/lab_4$ShapeFactoryTest.ic" NAME="ShapeFactoryTest Coverage Results" MODIFIED="1733324495060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/lab_4$RectangleTest.ic" NAME="RectangleTest Coverage Results" MODIFIED="1733324832649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

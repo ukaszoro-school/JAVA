@@ -22,17 +22,17 @@ public class ShapeDescriberTest {
 
         String expectedOut =
                 """
-                        Class is a Rectangle
+                        Class Type: Rectangle  ID: null
                           Area: 4.000000\s
                           Perimeter: 10.000000
                           Color: 0x8FFF649B\s
                         
-                        Class is a Rectangle
+                        Class Type: Rectangle  ID: null
                           Area: 10.000000\s
                           Perimeter: 14.000000
                           Color: 0x0E197873\s
                         
-                        Class is a Triangle
+                        Class Type: Triangle  ID: null
                           Area: 6.928203\s
                           Perimeter: 12.000000
                           Color: 0xA464FF09\s

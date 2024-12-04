@@ -4,7 +4,6 @@ import java.util.Scanner;
 @Entity
 @DiscriminatorValue("TRIANGLE")
 public class Triangle extends Shape {
-    private Long id;
     @Column (name = "Base length")
     double side_length;
     @Column (name = "Triangle height")
@@ -55,7 +54,7 @@ public class Triangle extends Shape {
 
     @Override
     public void printFullEntity() {
-        System.out.println(this.toString() + "\n\t" +
+        System.out.println(this + "\n\t" +
                  this.getColorDescription() + "\n\t" +
                  "Base length: " + this.side_length + "    Height: "+ this.height + "\n\t");
     }

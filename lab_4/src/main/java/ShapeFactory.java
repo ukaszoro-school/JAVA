@@ -3,9 +3,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ShapeFactory {
-    private static final Logger logger = LoggerFactory.getLogger(ShapeDescriber.class.getName());
-    private static final Scanner scanner = new Scanner(System.in);
-    public static Shape createShapeFromInput() {
+    private static final Logger logger = LoggerFactory.getLogger(ShapeFactory.class.getName());
+    public static Shape createShapeFromInput(Scanner scanner) {
         String shapeType;
         while (true) {
             System.out.println("Enter the shape type (RECTANGLE/TRIANGLE): ");
@@ -40,7 +39,7 @@ public class ShapeFactory {
                 return new Triangle(baseLength, color);
 
             default:
-                logger.error("Wrong shape type, something went horribly wrong '{}'", shapeType);
+                logger.error("Wrong shape type, something went horribly wrong since it should be impossible'{}'", shapeType);
                 throw new IllegalStateException("Unexpected value: " + shapeType);
         }
     }

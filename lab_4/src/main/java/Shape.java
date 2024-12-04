@@ -15,10 +15,6 @@ public abstract class Shape {
         Shape_color = new_color;
     }
 
-    public Shape() {
-        Shape_color = new Color(0,0,0,0);
-    }
-
     abstract double getArea();
     abstract double getPerimeter();
     public abstract Shape updateShape(Scanner scanner);

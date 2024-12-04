@@ -4,7 +4,6 @@ import java.util.Scanner;
 @Entity
 @DiscriminatorValue("RECTANGLE")
 public class Rectangle extends Shape {
-    private Long id;
     @Column (name = "Side a length")
     double side_a;
     @Column (name = "Side b length")
@@ -22,7 +21,7 @@ public class Rectangle extends Shape {
     @Override
     double getArea() {
         double result = side_b * side_a;
-        if (result < 0)
+        if (result <= 0)
             result = 0;
         return result;
     }
@@ -60,8 +59,8 @@ public class Rectangle extends Shape {
 
     @Override
     public void printFullEntity() {
-        System.out.println(this.toString() + "\n\t" +
+        System.out.println(this + "\n\t" +
                 this.getColorDescription() + "\n\t" +
-                "Side A length: " + this.side_a + "    Side B length: "+ this.side_b + "\n\t");
+                "Side A length: " + this.side_a + "    Side B length: "+ this.side_b + "\n");
     }
 }
