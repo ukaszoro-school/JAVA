@@ -7,15 +7,24 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
-public class ShapeDao{
+public class ShapeDao {
     private static final Logger logger = LoggerFactory.getLogger(ShapeDao.class.getName());
-    private static final SessionFactory sessionFactory;
+    private static SessionFactory sessionFactory;
 
-    static {
+    public ShapeDao(String configFileName) {
+        try {
+            sessionFactory = new Configuration().configure(configFileName).buildSessionFactory();
+        } catch (Throwable ex) {
+            logger.error("SessionFactory creation failed. {}", ex.getMessage(), ex);
+            throw new ExceptionInInitializerError(ex);
+        }
+    }
+
+    public ShapeDao() {
         try {
             sessionFactory = new Configuration().configure().buildSessionFactory();
         } catch (Throwable ex) {
-            logger.error("SessionFactory creation failed.{}", String.valueOf(ex));
+            logger.error("SessionFactory creation failed. {}", ex.getMessage(), ex);
             throw new ExceptionInInitializerError(ex);
         }
     }
@@ -26,10 +35,10 @@ public class ShapeDao{
             transaction = session.beginTransaction();
             session.persist(shape);
             transaction.commit();
-            logger.info("Shape '{}' added succesfully", shape);
+            logger.info("Shape '{}' added successfully.", shape);
         } catch (Exception e) {
             if (transaction != null) transaction.rollback();
-            logger.error("Failed to add new Shape'{}' with exception '{}'", shape, e.getMessage());
+            logger.error("Failed to add Shape '{}'. Exception: {}", shape, e.getMessage(), e);
         }
     }
 
@@ -40,17 +49,23 @@ public class ShapeDao{
                 logger.info("Shape fetched: {}", shape);
                 return shape;
             } else {
-                logger.warn("Failed to find Shape with iID: '{}'", id);
+                logger.warn("Shape with ID '{}' not found.", id);
                 return null;
             }
+        } catch (Exception e) {
+            logger.error("Error fetching Shape with ID '{}'. Exception: {}", id, e.getMessage(), e);
+            return null;
         }
     }
 
     public List<Shape> getAllShapes() {
         try (Session session = sessionFactory.openSession()) {
             List<Shape> shapes = session.createQuery("FROM Shape", Shape.class).list();
-            logger.info("All shapes fetched '{}'", shapes);
+            logger.info("All shapes fetched: {}", shapes);
             return shapes;
+        } catch (Exception e) {
+            logger.error("Error fetching all Shapes. Exception: {}", e.getMessage(), e);
+            return null;
         }
     }
 
@@ -60,10 +75,10 @@ public class ShapeDao{
             transaction = session.beginTransaction();
             session.merge(shape);
             transaction.commit();
-            logger.info("Shape updated: '{}'", shape);
+            logger.info("Shape '{}' updated successfully.", shape);
         } catch (Exception e) {
             if (transaction != null) transaction.rollback();
-            logger.error("Failed to update Shape'{}' with exception '{}'", shape, e.getMessage());
+            logger.error("Failed to update Shape '{}'. Exception: {}", shape, e.getMessage(), e);
         }
     }
 
@@ -75,17 +90,24 @@ public class ShapeDao{
             if (shape != null) {
                 session.remove(shape);
                 transaction.commit();
-                logger.info("Shape deleted: '{}'", shape);
+                logger.info("Shape '{}' deleted successfully.", shape);
             } else {
-                logger.info("No Shape found with ID '{}'", id);
+                logger.warn("No Shape found with ID '{}'. Deletion skipped.", id);
             }
         } catch (Exception e) {
             if (transaction != null) transaction.rollback();
-            logger.error("Failed to delete Shape with ID'{}' with exception '{}'", id, e.getMessage());
+            logger.error("Failed to delete Shape with ID '{}'. Exception: {}", id, e.getMessage(), e);
         }
     }
 
     public static void shutdown() {
-        sessionFactory.close();
+        try {
+            if (sessionFactory != null && sessionFactory.isOpen()) {
+                sessionFactory.close();
+                logger.info("SessionFactory shut down successfully.");
+            }
+        } catch (Exception e) {
+            logger.error("Failed to shut down SessionFactory. Exception: {}", e.getMessage(), e);
+        }
     }
 }

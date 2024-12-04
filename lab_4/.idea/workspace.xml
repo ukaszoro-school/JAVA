@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c4b1681-25a1-46e7-8073-fd80d5eb13af" name="Changes" comment="Lab_4&#10;&#10;update log:&#10;- implemented proper tests for all changes from previous commit&#10;- removed a few redundant tests that did not contribute to the coverage / overlapped with others&#10;- ShapeFactory.createShapeFromInput now takes Scanner class as an argument, mostly for testing purpose&#10;- ShapeFactory now has its own tests&#10;- slight change to main interface formatting&#10;- added 'print all shapes from table' functionality&#10;- Removed a few warning from multiple classes (mostly unnecessary code)">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShapeFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate-test.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ShapeDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Color.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shape.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ShapeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShapeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShapeDescriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShapeDescriber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShapeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShapeFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ColorTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/RectangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RectangleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShapeDescriberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShapeDescriberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShapeTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TriangleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +55,8 @@
     "Application.Main.executor": "Run",
     "Application.run main.executor": "Run",
     "JUnit.RectangleTest.executor": "Coverage",
+    "JUnit.ShapeDaoTest.executor": "Run",
+    "JUnit.ShapeDaoTest.testGetAllShapes.executor": "Run",
     "JUnit.ShapeFactoryTest.executor": "Coverage",
     "JUnit.run tests.executor": "Coverage",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -121,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733251149561</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Lab_4&#10;&#10;update log:&#10;- implemented proper tests for all changes from previous commit&#10;- removed a few redundant tests that did not contribute to the coverage / overlapped with others&#10;- ShapeFactory.createShapeFromInput now takes Scanner class as an argument, mostly for testing purpose&#10;- ShapeFactory now has its own tests&#10;- slight change to main interface formatting&#10;- added 'print all shapes from table' functionality&#10;- Removed a few warning from multiple classes (mostly unnecessary code)">
+      <option name="closed" value="true" />
+      <created>1733325470948</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733325470948</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,8 +142,15 @@
     <MESSAGE value="Lab_4&#10;&#10;update log:&#10;- implemented proper tests for all changes from previous commit&#10;- removed a few redundant tests that did not contribute to the coverage / overlapped with others&#10;- ShapeFactory.createShapeFromInput now takes Scanner class as an argument, mostly for testing purpose&#10;- ShapeFactory now has its own tests&#10;- slight change to main interface formatting&#10;- added 'print all shapes from table' functionality&#10;- Removed a few warning from multiple classes (mostly unnecessary code)" />
     <option name="LAST_COMMIT_MESSAGE" value="Lab_4&#10;&#10;update log:&#10;- implemented proper tests for all changes from previous commit&#10;- removed a few redundant tests that did not contribute to the coverage / overlapped with others&#10;- ShapeFactory.createShapeFromInput now takes Scanner class as an argument, mostly for testing purpose&#10;- ShapeFactory now has its own tests&#10;- slight change to main interface formatting&#10;- added 'print all shapes from table' functionality&#10;- Removed a few warning from multiple classes (mostly unnecessary code)" />
   </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="shapes1.get(0)" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/lab_4$run_tests.ic" NAME="run tests Coverage Results" MODIFIED="1733325002360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/lab_4$run_tests.ic" NAME="run tests Coverage Results" MODIFIED="1733336947118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/lab_4$ShapeFactoryTest.ic" NAME="ShapeFactoryTest Coverage Results" MODIFIED="1733324495060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/lab_4$RectangleTest.ic" NAME="RectangleTest Coverage Results" MODIFIED="1733324832649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>

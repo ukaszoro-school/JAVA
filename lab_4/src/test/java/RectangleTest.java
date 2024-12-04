@@ -3,7 +3,6 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
-
 import static org.junit.Assert.*;
 
 public class RectangleTest {
