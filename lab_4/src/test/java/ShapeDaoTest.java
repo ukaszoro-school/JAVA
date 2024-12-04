@@ -10,7 +10,6 @@ public class ShapeDaoTest {
 
     @AfterClass
     public static void shutdown() {
-        // Shut down the ShapeDao and release resources
         ShapeDao.shutdown();
     }
 
@@ -61,7 +60,6 @@ public class ShapeDaoTest {
 
     @Test
     public void testUpdateShape() {
-        // Add a rectangle, update its dimensions, and verify the changes
         Rectangle rectangle = new Rectangle(4.5, 5.5, new Color(0, 100, 50, 200));
         shapeDao.addShape(rectangle);
 
@@ -77,7 +75,6 @@ public class ShapeDaoTest {
 
     @Test
     public void testDeleteShape() {
-        // Add a rectangle, delete it, and verify it no longer exists
         Rectangle rectangle = new Rectangle(4.5, 5.5, new Color(0, 100, 50, 200));
         shapeDao.addShape(rectangle);
 
@@ -91,8 +88,7 @@ public class ShapeDaoTest {
 
     @Test
     public void testFetchNonExistentShape() {
-        // Attempt to fetch a shape that doesn't exist
-        Shape shape = shapeDao.getShape(999L); // Assume 999L does not exist
+        Shape shape = shapeDao.getShape(999L);
         assertNull(shape);
     }
 }
