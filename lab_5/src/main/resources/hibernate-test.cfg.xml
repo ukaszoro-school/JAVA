@@ -1,0 +1,25 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgrestesting</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">!QAZ2wsx</property>
+
+        <!-- Dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Show SQL -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Automatically create/update tables -->
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+
+        <!-- Specify annotated classes -->
+        <mapping class="Rectangle"/>
+        <mapping class="Triangle" />
+        <mapping class="Shape" />
+        <mapping class="Color" />
+    </session-factory>
+</hibernate-configuration>

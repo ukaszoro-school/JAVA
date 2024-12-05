@@ -45,21 +45,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.run main.executor": "Run",
-    "JUnit.RectangleTest.executor": "Coverage",
-    "JUnit.ShapeDaoTest.executor": "Run",
-    "JUnit.ShapeDaoTest.testGetAllShapes.executor": "Run",
-    "JUnit.ShapeFactoryTest.executor": "Coverage",
-    "JUnit.run tests.executor": "Coverage",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/lenovo/Documents/studia/JAVA/lab_4/src/test/java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.run main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RectangleTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ShapeDaoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ShapeDaoTest.testGetAllShapes.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ShapeFactoryTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.run tests.executor&quot;: &quot;Coverage&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lenovo/Documents/studia/JAVA/lab_4/src/test/java&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.run main">
     <configuration name="run main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
