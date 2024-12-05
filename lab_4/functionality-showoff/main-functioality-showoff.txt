@@ -1,0 +1,195 @@
+"C:\Program Files\Java\jdk-23\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.2.4\lib\idea_rt.jar=65497:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2024.2.4\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\lenovo\Documents\studia\JAVA\lab_4\target\classes;C:\Users\lenovo\.m2\repository\org\postgresql\postgresql\42.7.2\postgresql-42.7.2.jar;C:\Users\lenovo\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\lenovo\.m2\repository\org\hibernate\orm\hibernate-core\6.6.3.Final\hibernate-core-6.6.3.Final.jar;C:\Users\lenovo\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\lenovo\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\lenovo\.m2\repository\org\jboss\logging\jboss-logging\3.5.0.Final\jboss-logging-3.5.0.Final.jar;C:\Users\lenovo\.m2\repository\org\hibernate\common\hibernate-commons-annotations\7.0.3.Final\hibernate-commons-annotations-7.0.3.Final.jar;C:\Users\lenovo\.m2\repository\io\smallrye\jandex\3.2.0\jandex-3.2.0.jar;C:\Users\lenovo\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\lenovo\.m2\repository\net\bytebuddy\byte-buddy\1.14.18\byte-buddy-1.14.18.jar;C:\Users\lenovo\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\lenovo\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.0\jakarta.activation-api-2.1.0.jar;C:\Users\lenovo\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.2\jaxb-runtime-4.0.2.jar;C:\Users\lenovo\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.2\jaxb-core-4.0.2.jar;C:\Users\lenovo\.m2\repository\org\eclipse\angus\angus-activation\2.0.0\angus-activation-2.0.0.jar;C:\Users\lenovo\.m2\repository\org\glassfish\jaxb\txw2\4.0.2\txw2-4.0.2.jar;C:\Users\lenovo\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.1\istack-commons-runtime-4.1.1.jar;C:\Users\lenovo\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\lenovo\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\lenovo\.m2\repository\org\slf4j\slf4j-api\2.0.7\slf4j-api-2.0.7.jar;C:\Users\lenovo\.m2\repository\org\slf4j\slf4j-simple\2.0.7\slf4j-simple-2.0.7.jar Main
+Dec 05, 2024 11:34:18 AM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate ORM core version 6.6.3.Final
+Dec 05, 2024 11:34:19 AM org.hibernate.cache.internal.RegionFactoryInitiator initiateService
+INFO: HHH000026: Second-level cache disabled
+Dec 05, 2024 11:34:19 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH10001002: Using built-in connection pool (not intended for production use)
+Dec 05, 2024 11:34:20 AM org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl constructDialect
+WARN: HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+Dec 05, 2024 11:34:20 AM org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator initiateService
+INFO: HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: org.postgresql.Driver
+	Database version: 17.2
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+Dec 05, 2024 11:34:21 AM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
+INFO: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Dec 05, 2024 11:34:21 AM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@15e1f8fe] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+Hello to database user interface!
+Which action to perform?
+	0. Exit
+	1. Add new Shape
+	2. Update Shape
+	3. Remove a Shape
+	4. Print shape by id
+	5. Print all shapes in table
+
+5
+[main] INFO ShapeDao - All shapes fetched: [Type: Rectangle  ID: 2, Type: Triangle  ID: 3, Type: Rectangle  ID: 4, Type: Rectangle  ID: 1, Type: Rectangle  ID: 9, Type: Triangle  ID: 11, Type: Rectangle  ID: 13]
+Type: Rectangle  ID: 1
+	Alpha: 143  Red: 255  Green: 2  Blue: 100 
+	Side A length: 2.0    Side B length: 4.0
+
+Type: Rectangle  ID: 2
+	Alpha: 0  Red: 0  Green: 0  Blue: 0 
+	Side A length: 1.0    Side B length: 1.0
+
+Type: Triangle  ID: 3
+	Alpha: 0  Red: 0  Green: 0  Blue: 0 
+	Base length: 1.0    Height: 0.8660254037844386
+	
+Type: Rectangle  ID: 4
+	Alpha: 0  Red: 0  Green: 0  Blue: 0 
+	Side A length: 1.0    Side B length: 1.0
+
+Type: Rectangle  ID: 9
+	Alpha: 1  Red: 1  Green: 1  Blue: 1 
+	Side A length: 1.0    Side B length: 1.0
+
+Type: Triangle  ID: 11
+	Alpha: 1  Red: 1  Green: 1  Blue: 1 
+	Base length: 1.0    Height: 0.8660254037844386
+	
+Type: Rectangle  ID: 13
+	Alpha: 0  Red: 0  Green: 0  Blue: 0 
+	Side A length: 1.0    Side B length: 1.0
+
+Which action to perform?
+	0. Exit
+	1. Add new Shape
+	2. Update Shape
+	3. Remove a Shape
+	4. Print shape by id
+	5. Print all shapes in table
+
+1
+Enter the shape type (RECTANGLE/TRIANGLE): 
+Invalid shape type! Please enter 'RECTANGLE' or 'TRIANGLE'.
+Enter the shape type (RECTANGLE/TRIANGLE): 
+[main] INFO ShapeFactory - User passed an invalid shape type ''
+triangle
+Enter the color components (Alpha, Red, Green, Blue) as integers (0-255): 
+12
+14
+5432
+42
+Enter the base length: 
+5
+[main] INFO ShapeFactory - New triangle successfully created.
+[main] INFO ShapeDao - Shape 'Type: Triangle  ID: 14' added successfully.
+Which action to perform?
+	0. Exit
+	1. Add new Shape
+	2. Update Shape
+	3. Remove a Shape
+	4. Print shape by id
+	5. Print all shapes in table
+
+2
+Input an ID of the shape you wish to update: 
+14
+[main] INFO ShapeDao - Shape fetched: Type: Triangle  ID: 14
+Updating Triangle...
+Current Base Length: 5.0
+Current Height: 4.330127018922193
+Current Color: Alpha: 12  Red: 14  Green: 255  Blue: 42 
+Enter new value for Base Length: 
+6
+Enter new color components (Alpha, Red, Green, Blue): 
+754
+347
+-326
+0
+[main] INFO ShapeDao - Shape 'Type: Triangle  ID: 14' updated successfully.
+Which action to perform?
+	0. Exit
+	1. Add new Shape
+	2. Update Shape
+	3. Remove a Shape
+	4. Print shape by id
+	5. Print all shapes in table
+
+4
+Input the ID of the shape you wish to print: 
+13
+[main] INFO ShapeDao - Shape fetched: Type: Rectangle  ID: 13
+Type: Rectangle  ID: 13
+	Alpha: 0  Red: 0  Green: 0  Blue: 0 
+	Side A length: 1.0    Side B length: 1.0
+
+Which action to perform?
+	0. Exit
+	1. Add new Shape
+	2. Update Shape
+	3. Remove a Shape
+	4. Print shape by id
+	5. Print all shapes in table
+
+4
+Input the ID of the shape you wish to print: 
+14
+[main] INFO ShapeDao - Shape fetched: Type: Triangle  ID: 14
+Type: Triangle  ID: 14
+	Alpha: 255  Red: 255  Green: 0  Blue: 0 
+	Base length: 6.0    Height: 5.196152422706632
+	
+Which action to perform?
+	0. Exit
+	1. Add new Shape
+	2. Update Shape
+	3. Remove a Shape
+	4. Print shape by id
+	5. Print all shapes in table
+
+5
+[main] INFO ShapeDao - All shapes fetched: [Type: Rectangle  ID: 2, Type: Triangle  ID: 3, Type: Rectangle  ID: 4, Type: Rectangle  ID: 1, Type: Rectangle  ID: 9, Type: Triangle  ID: 11, Type: Rectangle  ID: 13, Type: Triangle  ID: 14]
+Type: Rectangle  ID: 1
+	Alpha: 143  Red: 255  Green: 2  Blue: 100 
+	Side A length: 2.0    Side B length: 4.0
+
+Type: Rectangle  ID: 2
+	Alpha: 0  Red: 0  Green: 0  Blue: 0 
+	Side A length: 1.0    Side B length: 1.0
+
+Type: Triangle  ID: 3
+	Alpha: 0  Red: 0  Green: 0  Blue: 0 
+	Base length: 1.0    Height: 0.8660254037844386
+	
+Type: Rectangle  ID: 4
+	Alpha: 0  Red: 0  Green: 0  Blue: 0 
+	Side A length: 1.0    Side B length: 1.0
+
+Type: Rectangle  ID: 9
+	Alpha: 1  Red: 1  Green: 1  Blue: 1 
+	Side A length: 1.0    Side B length: 1.0
+
+Type: Triangle  ID: 11
+	Alpha: 1  Red: 1  Green: 1  Blue: 1 
+	Base length: 1.0    Height: 0.8660254037844386
+	
+Type: Rectangle  ID: 13
+	Alpha: 0  Red: 0  Green: 0  Blue: 0 
+	Side A length: 1.0    Side B length: 1.0
+
+Type: Triangle  ID: 14
+	Alpha: 255  Red: 255  Green: 0  Blue: 0 
+	Base length: 6.0    Height: 5.196152422706632
+	
+Which action to perform?
+	0. Exit
+	1. Add new Shape
+	2. Update Shape
+	3. Remove a Shape
+	4. Print shape by id
+	5. Print all shapes in table
+
+0
+[main] INFO ShapeDao - SessionFactory shut down successfully.
+Data base finishing work, Shutting down...
+
+Process finished with exit code 0
