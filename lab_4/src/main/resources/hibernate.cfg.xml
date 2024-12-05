@@ -9,10 +9,6 @@
         <!-- Dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
-        <!-- Show SQL -->
-        <property name="hibernate.show_sql">true</property>
-        <property name="hibernate.format_sql">true</property>
-
         <!-- Automatically create/update tables -->
         <property name="hibernate.hbm2ddl.auto">update</property>
 

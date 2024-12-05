@@ -18,7 +18,7 @@ public record Color(int alpha, int red, int green, int blue) {
     }
 
     public Color(int red, int green, int blue) {
-        this(0, red, green, blue);  // Default alpha to 0
+        this(0, red, green, blue);
     }
 
     @Override

@@ -43,7 +43,7 @@ public class RectangleTest {
     @Test
     public void testUpdateShape() {
         // Simulate user input
-        String input = "4.5\n6.0\n255\n128\n128\n128\n"; // Simulated user input (one per line)
+        String input = "4.5\n6.0\n255\n128\n128\n128\n";
         ByteArrayInputStream inputStream = new ByteArrayInputStream(input.getBytes());
         Scanner scanner = new Scanner(inputStream);
 

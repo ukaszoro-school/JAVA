@@ -27,7 +27,7 @@ public class ShapeFactoryTest {
 
 
         // Simulate user input
-        String input1 = "Rectangle\n255\n128\n128\n128\n4.5\n6.0\n"; // Simulated user input (one per line)
+        String input1 = "Rectangle\n255\n128\n128\n128\n4.5\n6.0\n";
         ByteArrayInputStream inputStream1 = new ByteArrayInputStream(input1.getBytes());
         Scanner scanner1 = new Scanner(inputStream1);
 
@@ -38,7 +38,7 @@ public class ShapeFactoryTest {
         assertEquals(expectedOutput,outputStream.toString());
 
         // Simulate user input
-        String input2 = "triangle\n255\n128\n128\n128\n4.5\n"; // Simulated user input (one per line)
+        String input2 = "triangle\n255\n128\n128\n128\n4.5\n";
         ByteArrayInputStream inputStream2 = new ByteArrayInputStream(input2.getBytes());
         Scanner scanner2 = new Scanner(inputStream2);
 
@@ -47,7 +47,7 @@ public class ShapeFactoryTest {
         assertEquals(test_shape2.toString(), test_triangle.toString());
 
         // Simulate user input
-        String input3 = "215321rf\ngrwna\ntriangle\n255\n128\n128\n128\n4.5\n"; // Simulated user input (one per line)
+        String input3 = "215321rf\ngrwna\ntriangle\n255\n128\n128\n128\n4.5\n";
         ByteArrayInputStream inputStream3 = new ByteArrayInputStream(input3.getBytes());
         Scanner scanner3 = new Scanner(inputStream3);
 

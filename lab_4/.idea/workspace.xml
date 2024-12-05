@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c4b1681-25a1-46e7-8073-fd80d5eb13af" name="Changes" comment="Lab_4&#10;&#10;update log:&#10;- implemented proper tests for all changes from previous commit&#10;- removed a few redundant tests that did not contribute to the coverage / overlapped with others&#10;- ShapeFactory.createShapeFromInput now takes Scanner class as an argument, mostly for testing purpose&#10;- ShapeFactory now has its own tests&#10;- slight change to main interface formatting&#10;- added 'print all shapes from table' functionality&#10;- Removed a few warning from multiple classes (mostly unnecessary code)">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate-test.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShapeDaoTest.java" afterDir="false" />
+    <list default="true" id="9c4b1681-25a1-46e7-8073-fd80d5eb13af" name="Changes" comment="Lab_4&#10;&#10;update log:&#10;- added tests for ShapeDao&#10;- ShapeDao now has a constructor to specify the config for hibernate if needed (currently used to load up a testing database separate form the actual one)&#10;- ShapeDao.shutdown now checks if sessionFactory actually exists before closing it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShapeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ShapeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/RectangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RectangleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShapeFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShapeFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TriangleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +123,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733325470948</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Lab_4&#10;&#10;update log:&#10;- added tests for ShapeDao&#10;- ShapeDao now has a constructor to specify the config for hibernate if needed (currently used to load up a testing database separate form the actual one)&#10;- ShapeDao.shutdown now checks if sessionFactory actually exists before closing it">
+      <option name="closed" value="true" />
+      <created>1733337424966</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733337424966</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Lab_4&#10;&#10;update log:&#10;- added tests for ShapeDao&#10;- ShapeDao now has a constructor to specify the config for hibernate if needed (currently used to load up a testing database separate form the actual one)&#10;- ShapeDao.shutdown now checks if sessionFactory actually exists before closing it">
+      <option name="closed" value="true" />
+      <created>1733337543935</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733337543935</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,7 +157,8 @@
     <MESSAGE value="Lab_4&#10;&#10;update log:&#10;- fixed a big error caused by previous merge of lab4 into master with wrong directory" />
     <MESSAGE value="Lab_4&#10;&#10;update log:&#10;- Main class now has a nice console interface for interacting with the database &#10;(exit/add/update/remove/print by id, printing all shapes - work in progress)&#10;- ShapeDao now works properly as a middleman between user code and database&#10;- Triangle and Rectangle now have method updateShape that intakes a scanner and returns itself after changes are made&#10;- Triangle and Rectangle now have method printFullEntity used to print all their information, to String() is now used identifying shapes by type and id&#10;- new class ShapeFactory used to make new shapes with user input" />
     <MESSAGE value="Lab_4&#10;&#10;update log:&#10;- implemented proper tests for all changes from previous commit&#10;- removed a few redundant tests that did not contribute to the coverage / overlapped with others&#10;- ShapeFactory.createShapeFromInput now takes Scanner class as an argument, mostly for testing purpose&#10;- ShapeFactory now has its own tests&#10;- slight change to main interface formatting&#10;- added 'print all shapes from table' functionality&#10;- Removed a few warning from multiple classes (mostly unnecessary code)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab_4&#10;&#10;update log:&#10;- implemented proper tests for all changes from previous commit&#10;- removed a few redundant tests that did not contribute to the coverage / overlapped with others&#10;- ShapeFactory.createShapeFromInput now takes Scanner class as an argument, mostly for testing purpose&#10;- ShapeFactory now has its own tests&#10;- slight change to main interface formatting&#10;- added 'print all shapes from table' functionality&#10;- Removed a few warning from multiple classes (mostly unnecessary code)" />
+    <MESSAGE value="Lab_4&#10;&#10;update log:&#10;- added tests for ShapeDao&#10;- ShapeDao now has a constructor to specify the config for hibernate if needed (currently used to load up a testing database separate form the actual one)&#10;- ShapeDao.shutdown now checks if sessionFactory actually exists before closing it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab_4&#10;&#10;update log:&#10;- added tests for ShapeDao&#10;- ShapeDao now has a constructor to specify the config for hibernate if needed (currently used to load up a testing database separate form the actual one)&#10;- ShapeDao.shutdown now checks if sessionFactory actually exists before closing it" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

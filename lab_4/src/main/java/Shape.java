@@ -6,8 +6,8 @@ import java.util.Scanner;
 @DiscriminatorColumn(name = "shape_type", discriminatorType = DiscriminatorType.STRING)
 public abstract class Shape {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Ensure this is set correctly
-    private Long id; // Primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     Color Shape_color;
 
