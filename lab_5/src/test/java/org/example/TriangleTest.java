@@ -1,3 +1,6 @@
+package org.example;
+
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
@@ -14,39 +17,39 @@ public class TriangleTest {
     Triangle test_triangle4 = new Triangle();
     @Test
     public void testConstructorInitialization() {
-        assertEquals(test_triangle1.side_length, 3.0, 0.000001);
-        assertEquals(test_triangle1.height, 2.598076211353316, 0.000001);
-        assertEquals(test_triangle1.Shape_color.toString(), "0x00FF0564");
+        Assert.assertEquals(test_triangle1.width, 3.0, 0.000001);
+        Assert.assertEquals(test_triangle1.height, 2.598076211353316, 0.000001);
+        Assert.assertEquals(test_triangle1.Shape_color.toString(), "0x00FF0564");
 
-        assertEquals(test_triangle2.side_length, 1, 0.000001);
-        assertEquals(test_triangle2.height, 0.8660254037844386, 0.000001);
-        assertEquals(test_triangle2.Shape_color.toString(), "0xFFC81F64");
+        Assert.assertEquals(test_triangle2.width, 1, 0.000001);
+        Assert.assertEquals(test_triangle2.height, 0.8660254037844386, 0.000001);
+        Assert.assertEquals(test_triangle2.Shape_color.toString(), "0xFFC81F64");
 
-        assertEquals(test_triangle3.side_length, 1, 0.000001);
-        assertEquals(test_triangle3.height, 0.8660254037844386, 0.000001);
-        assertEquals(test_triangle3.Shape_color.toString(), "0x00000500");
+        Assert.assertEquals(test_triangle3.width, 1, 0.000001);
+        Assert.assertEquals(test_triangle3.height, 0.8660254037844386, 0.000001);
+        Assert.assertEquals(test_triangle3.Shape_color.toString(), "0x00000500");
     }
     @Test
     public void testEmptyConstructorInitialization() {
-        assertEquals(test_triangle4.side_length, 1.0, 0.000001);
-        assertEquals(test_triangle4.height, 0.8660254037844386, 0.000001);
-        assertEquals(test_triangle4.Shape_color.toString(), "0x00000000");
+        Assert.assertEquals(test_triangle4.width, 1.0, 0.000001);
+        Assert.assertEquals(test_triangle4.height, 0.8660254037844386, 0.000001);
+        Assert.assertEquals(test_triangle4.Shape_color.toString(), "0x00000000");
     }
     @Test
     public void testGetArea() {
-        assertEquals(test_triangle1.getArea(), 3.897114317029974, 0.0000000000001);
-        assertEquals(test_triangle2.getArea(), 0.4330127018922193, 0.0000000000001);
-        assertEquals(test_triangle3.getArea(), 0.4330127018922193, 0.0000000000001);
+        Assert.assertEquals(test_triangle1.getArea(), 3.897114317029974, 0.0000000000001);
+        Assert.assertEquals(test_triangle2.getArea(), 0.4330127018922193, 0.0000000000001);
+        Assert.assertEquals(test_triangle3.getArea(), 0.4330127018922193, 0.0000000000001);
     }
     @Test
     public void testGetPerimeter() {
-        assertEquals(test_triangle1.getPerimeter(), 9.0, 0.0000000000001);
-        assertEquals(test_triangle2.getPerimeter(), 3.0, 0.0000000000001);
-        assertEquals(test_triangle3.getPerimeter(), 3.0, 0.0000000000001);
+        Assert.assertEquals(test_triangle1.getPerimeter(), 9.0, 0.0000000000001);
+        Assert.assertEquals(test_triangle2.getPerimeter(), 3.0, 0.0000000000001);
+        Assert.assertEquals(test_triangle3.getPerimeter(), 3.0, 0.0000000000001);
     }
     @Test
     public void testToString() {
-        assertEquals(test_triangle1.toString(), "Type: Triangle  ID: null");
+        Assert.assertEquals(test_triangle1.toString(), "Type: Triangle  ID: null");
     }
 
     @Test
@@ -73,14 +76,14 @@ public class TriangleTest {
 
 
 
-        assertEquals(test_triangle1.side_length, 3.0, 0.000001);
-        assertEquals(test_triangle1.height, 2.598076211353316, 0.000001);
-        assertEquals(test_triangle1.Shape_color.toString(), "0x00FF0564");
+        Assert.assertEquals(test_triangle1.width, 3.0, 0.000001);
+        Assert.assertEquals(test_triangle1.height, 2.598076211353316, 0.000001);
+        Assert.assertEquals(test_triangle1.Shape_color.toString(), "0x00FF0564");
 
         test_triangle1.updateShape(scanner);
-        assertEquals(test_triangle1.side_length, 4.5, 0.000001);
-        assertEquals(test_triangle1.height, 3.8971143170299736, 0.000001);
-        assertEquals(test_triangle1.Shape_color.toString(), "0xFF808080");
+        Assert.assertEquals(test_triangle1.width, 4.5, 0.000001);
+        Assert.assertEquals(test_triangle1.height, 3.8971143170299736, 0.000001);
+        Assert.assertEquals(test_triangle1.Shape_color.toString(), "0xFF808080");
 
         assertEquals(expectedOutput,outputStream.toString());
 
@@ -114,6 +117,6 @@ public class TriangleTest {
     @Test
     public void testIDSetterGetter() {
         test_triangle1.setId(200L);
-        assertEquals(test_triangle1.getId(), Long.valueOf(200L));
+        Assert.assertEquals(test_triangle1.getId(), Long.valueOf(200L));
     }
 }

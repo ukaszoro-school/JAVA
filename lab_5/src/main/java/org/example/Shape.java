@@ -1,5 +1,19 @@
+package org.example;
+
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import jakarta.persistence.*;
 import java.util.Scanner;
+
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.PROPERTY,
+        property = "type"
+)
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = Triangle.class, name = "triangle"),
+        @JsonSubTypes.Type(value = Rectangle.class, name = "rectangle")
+})
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -9,10 +23,21 @@ public abstract class Shape {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Embedded
     Color Shape_color;
 
     public Shape(Color new_color) {
         Shape_color = new_color;
+    }
+
+    public Shape() {}
+
+    public Color getColor() {
+        return Shape_color;
+    }
+
+    public void setColor(Color color) {
+        this.Shape_color = color;
     }
 
     abstract double getArea();

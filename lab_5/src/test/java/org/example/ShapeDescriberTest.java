@@ -1,3 +1,5 @@
+package org.example;
+
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;

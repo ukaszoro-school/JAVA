@@ -1,3 +1,6 @@
+package org.example;
+
+import org.junit.Assert;
 import org.junit.Test;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -13,31 +16,31 @@ public class RectangleTest {
 
     @Test
     public void testConstructorInitialization() {
-        assertEquals(test_rect1.side_a, 4.5, 0.000001);
-        assertEquals(test_rect1.side_b, 9.2, 0.000001);
-        assertEquals(test_rect1.Shape_color.toString(), "0x00642DFF");
+        Assert.assertEquals(test_rect1.width, 4.5, 0.000001);
+        Assert.assertEquals(test_rect1.height, 9.2, 0.000001);
+        Assert.assertEquals(test_rect1.Shape_color.toString(), "0x00642DFF");
     }
     @Test
     public void testEmptyConstructorInitialization() {
-        assertEquals(test_rect4.side_a, 1.0, 0.000001);
-        assertEquals(test_rect4.side_b, 1.0, 0.000001);
-        assertEquals(test_rect4.Shape_color.toString(), "0x00000000");
+        Assert.assertEquals(test_rect4.width, 1.0, 0.000001);
+        Assert.assertEquals(test_rect4.height, 1.0, 0.000001);
+        Assert.assertEquals(test_rect4.Shape_color.toString(), "0x00000000");
     }
     @Test
     public void testGetArea() {
-        assertEquals(test_rect1.getArea(), 41.4, 0.00001);
-        assertEquals(test_rect2.getArea(), 0.0, 0.00001);
-        assertEquals(test_rect3.getArea(), 0.0, 0.00001);
+        Assert.assertEquals(test_rect1.getArea(), 41.4, 0.00001);
+        Assert.assertEquals(test_rect2.getArea(), 0.0, 0.00001);
+        Assert.assertEquals(test_rect3.getArea(), 0.0, 0.00001);
     }
     @Test
     public void testGetPerimeter () {
-        assertEquals(test_rect1.getPerimeter(), 27.4, 0.00001);
-        assertEquals(test_rect2.getPerimeter(), 0.0, 0.00001);
-        assertEquals(test_rect3.getPerimeter(), 0.0, 0.00001);
+        Assert.assertEquals(test_rect1.getPerimeter(), 27.4, 0.00001);
+        Assert.assertEquals(test_rect2.getPerimeter(), 0.0, 0.00001);
+        Assert.assertEquals(test_rect3.getPerimeter(), 0.0, 0.00001);
     }
     @Test
     public void testToString() {
-        assertEquals(test_rect1.toString(),"Type: Rectangle  ID: null");
+        Assert.assertEquals(test_rect1.toString(),"Type: Rectangle  ID: null");
     }
 
     @Test
@@ -54,22 +57,22 @@ public class RectangleTest {
 
         String expectedOutput = String.join(System.lineSeparator(),
                 "Updating Rectangle...",
-                "Current Side A: 4.5",
-                "Current Side B: 9.2",
+                "Width: 4.5",
+                "Height: 9.2",
                 "Current Color: Alpha: 0  Red: 100  Green: 45  Blue: 255 ",
-                "Enter new value for Side A: ",
-                "Enter new value for Side B: ",
+                "Enter new value for width: ",
+                "Enter new value for height: ",
                 "Enter new color components (Alpha, Red, Green, Blue): "
         ) + System.lineSeparator();
 
-        assertEquals(test_rect1.side_a, 4.5, 0.000001);
-        assertEquals(test_rect1.side_b, 9.2, 0.000001);
-        assertEquals(test_rect1.Shape_color.toString(), "0x00642DFF");
+        Assert.assertEquals(test_rect1.width, 4.5, 0.000001);
+        Assert.assertEquals(test_rect1.height, 9.2, 0.000001);
+        Assert.assertEquals(test_rect1.Shape_color.toString(), "0x00642DFF");
 
         test_rect1.updateShape(scanner);
-        assertEquals(test_rect1.side_a, 4.5, 0.000001);
-        assertEquals(test_rect1.side_b, 6.0, 0.000001);
-        assertEquals(test_rect1.Shape_color.toString(), "0xFF808080");
+        Assert.assertEquals(test_rect1.width, 4.5, 0.000001);
+        Assert.assertEquals(test_rect1.height, 6.0, 0.000001);
+        Assert.assertEquals(test_rect1.Shape_color.toString(), "0xFF808080");
 
         assertEquals(expectedOutput,outputStream.toString());
 
@@ -88,7 +91,7 @@ public class RectangleTest {
                 """
                         Type: Rectangle  ID: null
                         	Alpha: 0  Red: 100  Green: 45  Blue: 255\s
-                        	Side A length: 4.5    Side B length: 9.2
+                        	Width: 4.5    Height: 9.2
                         
                         """
         );
@@ -103,6 +106,6 @@ public class RectangleTest {
     @Test
     public void testIDSetterGetter() {
         test_rect1.setId(200L);
-        assertEquals(test_rect1.getId(), Long.valueOf(200L));
+        Assert.assertEquals(test_rect1.getId(), Long.valueOf(200L));
     }
 }

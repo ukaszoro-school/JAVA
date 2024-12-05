@@ -1,3 +1,5 @@
+package org.example;
+
 import jakarta.persistence.Embeddable;
 
 @Embeddable
@@ -20,6 +22,7 @@ public record Color(int alpha, int red, int green, int blue) {
     public Color(int red, int green, int blue) {
         this(0, red, green, blue);
     }
+
 
     @Override
     public String toString() {

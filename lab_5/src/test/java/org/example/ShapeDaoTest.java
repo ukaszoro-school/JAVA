@@ -1,3 +1,5 @@
+package org.example;
+
 import org.junit.*;
 
 import java.util.Comparator;
@@ -19,10 +21,10 @@ public class ShapeDaoTest {
         int num_of_shapes = shapeDao.getAllShapes().size();
         shapeDao.addShape(rectangle);
 
-        assertEquals(num_of_shapes + 1, shapeDao.getAllShapes().size());
+        Assert.assertEquals(num_of_shapes + 1, shapeDao.getAllShapes().size());
         Shape testing_shape = shapeDao.getShape(rectangle.getId());
         assertTrue(testing_shape instanceof Rectangle);
-        assertEquals(rectangle.getArea(), testing_shape.getArea(), 0.0001);
+        Assert.assertEquals(rectangle.getArea(), testing_shape.getArea(), 0.0001);
     }
 
     @Test
@@ -33,7 +35,7 @@ public class ShapeDaoTest {
         Shape fetchedShape = shapeDao.getShape(rectangle.getId());
         assertNotNull(fetchedShape);
         assertTrue(fetchedShape instanceof Rectangle);
-        assertEquals(rectangle.getArea(), fetchedShape.getArea(), 0.0001);
+        Assert.assertEquals(rectangle.getArea(), fetchedShape.getArea(), 0.0001);
     }
 
     @Test
@@ -53,8 +55,8 @@ public class ShapeDaoTest {
         shapes2.sort(Comparator.comparing(Shape::getId));
 
         for (int i = 0; i < shapes1.size(); i++) {
-            assertEquals(shapes1.get(i).toString(), shapes2.get(i).toString());
-            assertEquals(shapes1.get(i).getColorDescription(), shapes2.get(i).getColorDescription());
+            Assert.assertEquals(shapes1.get(i).toString(), shapes2.get(i).toString());
+            Assert.assertEquals(shapes1.get(i).getColorDescription(), shapes2.get(i).getColorDescription());
         }
     }
 
@@ -63,14 +65,14 @@ public class ShapeDaoTest {
         Rectangle rectangle = new Rectangle(4.5, 5.5, new Color(0, 100, 50, 200));
         shapeDao.addShape(rectangle);
 
-        rectangle.side_a = 10.0;
-        rectangle.side_b = 15.0;
+        rectangle.width = 10.0;
+        rectangle.height = 15.0;
         shapeDao.updateShape(rectangle);
 
         Shape updatedShape = shapeDao.getShape(rectangle.getId());
         assertTrue(updatedShape instanceof Rectangle);
-        assertEquals(10.0, ((Rectangle) updatedShape).side_a, 0.001);
-        assertEquals(15.0, ((Rectangle) updatedShape).side_b, 0.001);
+        Assert.assertEquals(10.0, ((Rectangle) updatedShape).width, 0.001);
+        Assert.assertEquals(15.0, ((Rectangle) updatedShape).height, 0.001);
     }
 
     @Test
