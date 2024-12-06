@@ -24,7 +24,7 @@ public class ShapeDao {
 
     public ShapeDao() {
         try {
-            sessionFactory = new Configuration().configure().buildSessionFactory();
+            sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
         } catch (Throwable ex) {
             logger.error("SessionFactory creation failed. {}", ex.getMessage(), ex);
             throw new ExceptionInInitializerError(ex);

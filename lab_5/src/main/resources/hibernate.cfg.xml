@@ -13,9 +13,9 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- Specify annotated classes -->
-        <mapping class="org.example\Rectangle"/>
-        <mapping class="org.example\Triangle" />
-        <mapping class="org.example\Shape" />
-        <mapping class="org.example\Color" />
+        <mapping class="org.example.Rectangle"/>
+        <mapping class="org.example.Triangle" />
+        <mapping class="org.example.Shape" />
+        <mapping class="org.example.Color" />
     </session-factory>
 </hibernate-configuration>

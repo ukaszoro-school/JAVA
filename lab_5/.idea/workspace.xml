@@ -4,30 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c4b1681-25a1-46e7-8073-fd80d5eb13af" name="Changes" comment="Lab_5&#10;&#10;update log:&#10;- cloned lab_4 for future lab_5 needs and expansion">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MainApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ShapeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ShapeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ShapeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="9c4b1681-25a1-46e7-8073-fd80d5eb13af" name="Changes" comment="Lab_5&#10;&#10;update log:&#10;- moved all classes to org.example because of problems with MainApplication&#10;- changes to a few classes to make the api see them properly and work (mostly setters and getters, and minor variable name changes)&#10;- Multiple new files needed for api configuration&#10;- Shape nw has a JsonSubTypes, needed for json requests to properly create rectangle/triangle objects">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Color.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShapeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ShapeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShapeDescriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ShapeDescriber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ShapeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ShapeFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ShapeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ShapeDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate-test.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate-test.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RectangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/RectangleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShapeDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ShapeDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShapeDescriberTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ShapeDescriberTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShapeFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ShapeFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TriangleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +74,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.run api">
+  <component name="RunManager" selected="Application.run main">
     <configuration name="run api" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.example.MainApplication" />
       <module name="lab_4" />
@@ -198,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733400574574</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Lab_5&#10;&#10;update log:&#10;- moved all classes to org.example because of problems with MainApplication&#10;- changes to a few classes to make the api see them properly and work (mostly setters and getters, and minor variable name changes)&#10;- Multiple new files needed for api configuration&#10;- Shape nw has a JsonSubTypes, needed for json requests to properly create rectangle/triangle objects">
+      <option name="closed" value="true" />
+      <created>1733414657102</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733414657102</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,7 +209,8 @@
     <MESSAGE value="Lab_4&#10;&#10;update log:&#10;- removed some unnecessary lines&#10;- slight change to hibernate.cfg.xml to disable sql commands for debug" />
     <MESSAGE value="Lab_4&#10;&#10;update log:&#10;- added screenshots of main running and a .txt with the whole text and a screenshot of the postgres command line with the state after to show everything works properly" />
     <MESSAGE value="Lab_5&#10;&#10;update log:&#10;- cloned lab_4 for future lab_5 needs and expansion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab_5&#10;&#10;update log:&#10;- cloned lab_4 for future lab_5 needs and expansion" />
+    <MESSAGE value="Lab_5&#10;&#10;update log:&#10;- moved all classes to org.example because of problems with MainApplication&#10;- changes to a few classes to make the api see them properly and work (mostly setters and getters, and minor variable name changes)&#10;- Multiple new files needed for api configuration&#10;- Shape nw has a JsonSubTypes, needed for json requests to properly create rectangle/triangle objects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab_5&#10;&#10;update log:&#10;- moved all classes to org.example because of problems with MainApplication&#10;- changes to a few classes to make the api see them properly and work (mostly setters and getters, and minor variable name changes)&#10;- Multiple new files needed for api configuration&#10;- Shape nw has a JsonSubTypes, needed for json requests to properly create rectangle/triangle objects" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
